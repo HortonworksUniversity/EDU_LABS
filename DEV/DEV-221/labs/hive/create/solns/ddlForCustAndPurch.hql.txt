@@ -1,0 +1,22 @@
+CREATE DATABASE IF NOT EXISTS sample;
+
+USE sample;
+
+DROP TABLE IF EXISTS customer;
+
+CREATE EXTERNAL TABLE customer (
+     cust_id int, fname string, lname string, state char(2) )
+  ROW FORMAT DELIMITED 
+  FIELDS TERMINATED BY '\t'
+  STORED AS TEXTFILE
+  LOCATION '/user/user1/sampledata/customer/';
+
+DROP TABLE IF EXISTS purchase;
+
+CREATE EXTERNAL TABLE purchase (
+     cust_id int, purch_ts timestamp, sku_nbr int,
+     category string, price decimal(9,2), description string )
+  ROW FORMAT DELIMITED
+  FIELDS TERMINATED BY '\t'
+  STORED AS TEXTFILE
+  LOCATION '/user/user1/sampledata/purchase/';

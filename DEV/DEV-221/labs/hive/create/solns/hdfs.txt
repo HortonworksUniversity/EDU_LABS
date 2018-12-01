@@ -1,0 +1,7 @@
+sudo su -
+su - user1
+hdfs dfs -mkdir sampledata
+hdfs dfs -mkdir sampledata/customer
+hdfs dfs -mkdir sampledata/purchase
+hdfs dfs -put /labfiles/data/ecomm/sample/customers.txt sampledata/customer/
+hdfs dfs -put /labfiles/data/ecomm/sample/purchases.txt sampledata/purchase/

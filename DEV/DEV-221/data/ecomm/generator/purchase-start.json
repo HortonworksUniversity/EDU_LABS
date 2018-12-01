@@ -1,0 +1,14 @@
+{
+    "delimiter": "\t",
+    "fields": [
+    	{
+    		"number": {
+    			"type": "int",
+    			"min": 1000000,
+    			"max": 1999999
+    		}
+    	},
+    	{
+            "date": {
+                "format": "yyyy-MM-dd HH:mm:ss",
+                "range": {

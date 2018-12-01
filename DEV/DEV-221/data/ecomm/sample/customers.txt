@@ -1,0 +1,6 @@
+1	California	Dreaming	CA
+222	Lester	Martin	GA
+444	Gretchen	Martin	GA
+3333	Joseph	Schmo	TX
+6666	Suzie	Tuzie	AR
+9999	John	Appleseed	OK

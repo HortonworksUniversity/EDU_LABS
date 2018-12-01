@@ -1,0 +1,37 @@
+                }
+            }
+        },
+        {
+    		"number": {
+    			"type": "int",
+    			"min": 11111,
+    			"max": 66666
+    		}
+    	},  	
+		{
+            "string": {
+                "set": ["ART", "AUTO", "BABY", "BEAUTY", "BOOKS", "CLOTHING", "COLLECTIBLES", "COMPUTERS", "ELECTRONICS", "FURNITURE", "GAMES", "GROCERIES", "INDUSTRIAL", "JEWELRY", "HOME IMPROVEMENT", "MOVIES", "MUSIC", "SHOES", "SPORTING GOODS"]
+            }
+        },
+        {
+            "number": {
+                "type": "float",
+                "decimals": 2,
+                "min": 1,
+                "max": 300
+            }
+        },
+        {
+            "string": {
+                "random": {
+                    "min": 10,
+                    "max": 70,
+                    "chars": "ABDEFGHIJKLMNOPQRSTUVWXYZ 1234567890",
+                    "pool": {
+                        "size": "55555"
+                    }
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+select count(*) as tot_nbr_cust from customer;
+
+select * from customer where fname = 'John';
+select * from customer where lname = 'Martin';
+select * from customer where (LOWER(fname) LIKE 'su%');
+
+select count(cust_id) as cust_by_state, state 
+  from customer GROUP BY state 
+HAVING cust_by_state > 1 
+ order by cust_by_state DESC, state ASC;
+
+SELECT CATEGORY, COUNT(CUST_ID) FROM PURCHASE GROUP BY CATEGORY;
+
+SELECT COUNT(DISTINCT(SKU_NBR)) FROM PURCHASE;
+
+SELECT COUNT(*)
+  FROM PURCHASE
+ WHERE PURCHASE.PURCH_TS >= unix_timestamp('2016-07-03', 'yyyy-MM-dd')
+   AND PURCHASE.PURCH_TS <  unix_timestamp('2016-07-06', 'yyyy-MM-dd')
+   AND PURCHASE.CATEGORY = "ELECTRONICS";
+
+SELECT CUSTOMER.STATE,
+       COUNT(PURCHASE.PRICE) AS TOT_CNT 
+  FROM PURCHASE
+ INNER JOIN CUSTOMER ON PURCHASE.CUST_ID = CUSTOMER.CUST_ID
+ WHERE PURCHASE.PURCH_TS >= unix_timestamp('2016-07-03', 'yyyy-MM-dd')
+   AND PURCHASE.PURCH_TS <  unix_timestamp('2016-07-06', 'yyyy-MM-dd')
+ GROUP BY CUSTOMER.STATE
+ ORDER BY TOT_CNT DESC;
+ 

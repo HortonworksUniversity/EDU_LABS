@@ -1,0 +1,2 @@
+hdfs dfs -put 3-moreCustomers.txt sampledata/customer/
+
